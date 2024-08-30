@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/wupengwei/workspace/project/sgg_project/demo/12demo'
+relocations:     []
+...
