@@ -1,3 +1,10 @@
 {
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "stdio.h": "c",
+        "bitset": "c",
+        "unordered_map": "c",
+        "__locale": "c",
+        "ios": "c"
+    }
 }

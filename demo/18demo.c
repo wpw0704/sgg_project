@@ -4,11 +4,17 @@
 
 int main()
 {
-    for (int i = 1; i <= 2; i++)
+    int s=0,a,n,t;
+    printf("请输入 a 和 n：\n");
+    scanf("%d%d",&a,&n);
+    t=a;
+    while(n>0)
     {
-        printf("%d \n",i);
+        s+=t;
+        a=a*10;
+        t+=a;
+        n--;
     }
-    
-    
+    printf("a+aa+...=%d\n",s);
     return 0;
 }
