@@ -1,41 +1,36 @@
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 
-// 删除一个字符串中的指定字母，如：字符串 "aca"，删除其中的 a 字母
+int x = 0;
+// 删除一个字符串中的指定字母，如：字符串 "aca"，删除其中的 a 字母。
 
-char *func(char *ptr, char *ptr1, char c ,int len)
+char *get_a(char *ptr, int len)
 {
-    for (int i = 0; i < len; i++)
+    static char num[256] = {0};
+    char *ptr1 = num;
+    char p = 'a';
+    for (size_t i = 0; i < len; i++)
     {
-        if ( ptr[i] == c)
+        if (ptr[i] != p)
         {
-            continue;
+            ptr1[x] = ptr[i];
+            x++;
         }
-        
-        
     }
+    ptr1[x] = '\0';
     return ptr1;
-    
 }
 
 int main()
 {
-    char c = 'a';
-    char num1[] = "aca";
-    int len = strlen(num1), p = 0;
-    for (int i = 0; i < len; i++)
+    char c[] = "acaba";
+    int len = strlen(c);
+    char *ptt = get_a(c, len);
+    // printf("%d \n" ,x);
+    for (int i = 0; i < x; i++)
     {
-        if (num1[i] == c)
-        {
-            p++;
-        }
+        printf("%c \n", ptt[i]);
     }
-    char num2[len - p +1];
-    func(num1,num2,c,len);
-    for (int i = 0; i < strlen(num2); i++)
-    {
-        printf("%c \n",num2[i]);
-    }
-    
+
     return 0;
 }
